@@ -286,9 +286,22 @@
     url('assets/webfonts/DINNextLTPro/DINNextLTPro-Medium.woff') format('woff'), 
     url('assets/webfonts/DINNextLTPro/DINNextLTPro-Medium.ttf') format('truetype'), 
     url('assets/webfonts/DINNextLTPro/DINNextLTPro-Medium.svg') format('svg');
-    font-weight: normal;
+    font-weight: medium;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'DINNextLTPro-Bold';
+    src: url('assets/webfonts/DINNextLTPro/DINNextLTPro-Bold.eot');
+    src: url('assets/webfonts/DINNextLTPro/DINNextLTPro-Bold.eot?#iefix') format ('embedded-opentype'),
+    url('assets/webfonts/DINNextLTPro/DINNextLTPro-Bold.woff') format('woff'), 
+    url('fonts/DINNextLTPro-Bold.ttf') format('truetype'), 
+    url('fonts/DINNextLTPro-Bold.svg') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
 
 h1{
     font-family: 'DINNextLTPro-LightCondensed';
@@ -308,7 +321,11 @@ h2 {
 }
 
 h3 {
-
+    font-family: 'DINNextLTPro-Bold';
+    font-size: 14px;
+    color:black;
+    text-transform: uppercase;
+    font-weight:bold;
 }
 
 h4 { 

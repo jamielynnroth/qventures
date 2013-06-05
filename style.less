@@ -3,10 +3,14 @@
 
 html {
 	width:100%;
-	height:auto;
+	height:100%;
 	margin: 0 auto;
 
 } // html
+
+body {
+	height: 100%;
+}
 
 .home body {
 	background-image: url("assets/images/homebackground1200.jpg");
@@ -198,7 +202,7 @@ html {
 		#arrow {
 			//change arrow to pointing up
 			top:58px !important;
-			right: 125px !important;
+			right: 157px !important;
 			border-bottom: 6px solid #ffffff !important;
 			border-top: none !important;
 		}
@@ -217,14 +221,20 @@ html {
 		display:block;
 	}
 } // headimg
+.boxwrap {
+	width: 1000px;
+	margin: 0 auto;
+	top: -257px;
+	// left: 90px;
+	position:relative;
+	height: 227px;
+}
 
 .titlebox {
 	width: 490px;
 	height: 227px;
 	background-color: black;
-	top: -257px;
 	position: relative;
-	left: 90px;
 	border-bottom: 1px dashed white;
 	text-align: center;
 
@@ -243,15 +253,42 @@ html {
 }
 
 #portfolio {
+		height: 100%;
 		width: 1000px;
 		margin: 0 auto;
 		margin-top: 60px;
 
-		h2 {
+		#title {
 			padding-top: 15px;
+			padding-left: 20px;
+			float: left;
 		}
-	}
 
+		#filter {
+			float:left;
+			left: 300px;
+			position:relative;
 
-
+			#bar {
+				background-color:black;
+				width:455px;
+				height: 5px;
+			} //bar 
+			
+			ul {
+				text-align:center;
+				margin-top: 15px;
+			
+				li {
+				display:inline;
+				}
+				li:first-child {
+					padding-right: 50px;
+				}
+				li:nth-child(2) {
+					padding-right:50px;
+				}
+		} //ul 
+		} // filter
+}// #portfolio 
 
