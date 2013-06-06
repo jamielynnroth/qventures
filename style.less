@@ -12,7 +12,11 @@ body {
 	height: 100%;
 }
 
-.home body {
+// HOME PAGE 
+//------------------------------------------------------------------
+
+
+#home {
 	background-image: url("assets/images/homebackground1200.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
@@ -54,6 +58,7 @@ body {
 
 
 // NAV BAR STYLES FOR HEADER AND FOOTER
+//---------------------------------------------------------------
 .header {
 	// background-color:black;
 	color:white;
@@ -271,8 +276,12 @@ body {
 
 			#bar {
 				background-color:black;
-				width:455px;
+				width:450px;
 				height: 5px;
+
+				img {
+					display:block;
+				}
 			} //bar 
 			
 			ul {
@@ -290,5 +299,107 @@ body {
 				}
 		} //ul 
 		} // filter
+
+		#companygrid {
+			width: 1020px;
+			clear:both;
+			padding-top: 20px;
+
+			.pure-u-1-4 {
+				height: 245px;
+				background-color:gray;
+				border: 1px solid white;
+
+				img {
+					margin: 0 auto;
+					margin-top: 40px;
+					text-align: center;
+					display: block;
+					} // img
+
+					.rollover {
+						display:none;
+
+						.links {
+							position:absolute;
+							width: 170px;
+							margin-left:45px;
+							margin-top: 170px;
+
+						.twitter {
+							background-color:#ff0000;
+							height:50px;
+							width: 50px;
+							float:left;
+							margin-right: 10px;
+							-webkit-box-shadow: -2px 2px 0px rgba(0, 0, 0, 1);
+							-moz-box-shadow:    -2px 2px 0px rgba(0, 0, 0, 1);
+							box-shadow:         -2px 2px 0px rgba(0, 0, 0, 1);
+
+							img {
+								margin-top: 14.5px;
+							}
+						}
+						.web {
+							background-color:#ff0000;
+							height:50px;
+							width: 50px;
+							float:left;
+							margin-right: 10px;
+							-webkit-box-shadow: -2px 2px 0px rgba(0, 0, 0, 1);
+							-moz-box-shadow:    -2px 2px 0px rgba(0, 0, 0, 1);
+							box-shadow:         -2px 2px 0px rgba(0, 0, 0, 1);
+
+								h3 {
+									font-size: 16px;
+									color:white;
+									text-transform: none;
+									letter-spacing: 1.75px;
+									text-align:center;
+									margin-top: 16.5px;
+
+								}
+						}
+						.angel {
+							background-color:#ff0000;
+							height:50px;
+							width: 50px;
+							float: left;
+							-webkit-box-shadow: -2px 2px 0px rgba(0, 0, 0, 1);
+							-moz-box-shadow:    -2px 2px 0px rgba(0, 0, 0, 1);
+							box-shadow:         -2px 2px 0px rgba(0, 0, 0, 1);
+
+								img {
+									margin-top: 10px;
+								}
+						} // angel
+						} //links
+
+					} // rollover
+				} //pure-u-1-4
+
+				#10-sheet  {
+					.rollover {
+						background-image: url('assets/portfoliologos/10s-grey.png/');
+						background-position:center;
+						height: 245px;
+						width: 255px;
+						background-repeat:no-repeat;
+
+					.companyname {
+						position: absolute;
+						margin: 85px 105px;
+					}
+					.city {
+						position: absolute;
+						margin: 105px 84px;
+					} //city
+				} // .rollover
+				} // #10-sheet
+
+			} // companygrid
+		
+
+
 }// #portfolio 
 
