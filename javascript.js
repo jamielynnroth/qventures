@@ -17,3 +17,12 @@
 		});
 
 
+		$(function() {
+			$('.pure-u-1-4').hover(function() {
+				// $(this).hide('img');
+				$(this).show('.rollover');
+			// }, function() {
+			// 	$(this).hide('.rollover');
+				// $(this).show('img');
+			});
+		});
