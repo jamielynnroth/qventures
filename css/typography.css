@@ -374,7 +374,9 @@ h1{
     color:white;
     text-transform: uppercase;
     font-weight:normal;
+    line-height: 97px;
 }
+
 
 h2 {
     font-family: 'DINNextLTPro-LightCondensed';
@@ -391,6 +393,7 @@ h3 {
     color:black;
     text-transform: uppercase;
     font-weight:bold;
+    letter-spacing: 1px;
 }
 
 h4 { 
@@ -415,8 +418,9 @@ h6 {
     line-height: 25px;
 }
 
-.philosophy h6 {
+.philosophy, .team h6 {
     font-size: 16px;
+    line-height: 21px;
 }
 
 h6 a {
@@ -459,6 +463,7 @@ a {
 .philosophy h2 {
     font-family: "DINNextLTPro-MediumCond";
     font-size: 50px;
+    letter-spacing: .2px;
 }
 
 #wanttoknow h3 {
@@ -473,4 +478,10 @@ a {
     margin: 0 auto;
     font-weight:normal;
     letter-spacing: 2px;
+}
+
+.team h2 {
+    font-size: 55px;
+    color: white;
+    font-weight:normal;
 }

@@ -306,6 +306,11 @@ body {
 			padding-top: 20px;
 
 		// Global formatting for each card 
+
+			.pure-g-r {
+				box-sizing:border-box;
+			}
+
 			.pure-u-1-4 {
 				height: 245px;
 				border: 1px solid black;
@@ -556,22 +561,28 @@ body {
 	.pure-u-1-2 {
 		// border: 1px solid gray;
 		height: 100px;
-		box-sizing: border-box;
+		// box-sizing: border-box;
 		text-align: center;
+
+		.liner {
 		padding-left:80px;
 		padding-right: 80px;
 		margin-bottom: 50px;
-
+		}
 	}
 	.pure-u-1 {
 		text-align: center;
-		padding-top: 20px;
+
+		.liner {
+			padding-top: 20px;
+		}
+		
 	} // pure
 
 	} // #weInvest
 
 	#wanttoknow {
-		height: 525px;
+		height: 530px;
 		width: 1020px;
 		background-color: #f5f5f5;
 		margin-top: 80px;
@@ -582,14 +593,20 @@ body {
 			padding-bottom: 30px;
 		}
 
-		.pure-u-1-2 {
+		.pure-u-1-2  {
+
+			height:auto;
+			margin-bottom: 25px;
+			
+			.liner {
 			text-align: left;
-			padding-left: 30px;
-			padding-right: 30px;
+			padding-left: 40px;
+			width: 420px;
 			margin:0;
-			width: 49%;
+			// width: 49%;
 			height: auto;
 			margin-bottom: 20px;
+		} // liner
 		} // pure
 	} // #wanttoknow
 
@@ -607,6 +624,27 @@ body {
 			margin-bottom: 100px;
 			margin-top: 60px;
 		}// form
+}
 
-	
+//--------------------TEAM PAGE STYLES ---------------------------
+
+#teamgrid {
+	width: 1020px;
+	margin: 0 auto;
+	margin-top: 60px;
+
+	.liner {
+		padding: 30px 20px 0 2px;
+	}
+
+	.pure-u-1-4 {
+		height: 245px;
+	}
+	.categoryblock {
+		background-color:black;
+		color:white;
+		text-align:center;
+		line-height: 245px;
+
+	}
 }
