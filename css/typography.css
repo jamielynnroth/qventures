@@ -491,3 +491,17 @@ a {
     color: white;
     font-weight:normal;
 }
+
+.name {
+    font-family: "ProximaNova-Bold";
+    font-size: 20px;
+    color:white;
+}
+
+.title {
+    font-family: "ProximaNova-Bold";
+    font-size: 16px;
+    color:white;
+    
+
+}
