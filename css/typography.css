@@ -442,7 +442,7 @@ h6 span {
 .companyname {
     font-family: "ProximaNova-Bold"; 
     font-weight:normal;
-    font-size: 14px;
+    font-size: 19px;
     color: black;
     text-align:center;
     /*margin-top: 85px;*/
@@ -451,7 +451,7 @@ h6 span {
 .city {
     font-family: "ProximaNova-Bold"; 
     font-weight:normal;
-    font-size: 14px;
+    font-size: 19px;
     color: #666666;
     text-align:center;
 }
