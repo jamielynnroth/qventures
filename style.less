@@ -15,7 +15,9 @@ body {
 }
 
 
-
+a:hover {
+	text-decoration: none;
+}
 // HOME PAGE 
 //------------------------------------------------------------------
 
@@ -174,7 +176,7 @@ body {
 				} // arrow
 
 			} // #hoverstate
-			} // #madeinny 
+			} // #madeinny
 			} //social
 		} // footerwrap
 
@@ -231,7 +233,7 @@ body {
 	}
 } // headimg
 .boxwrap {
-	width: 1000px;
+	width: 1020px;
 	margin: 0 auto;
 	top: -257px;
 	// left: 90px;
@@ -331,14 +333,47 @@ body {
 					} // img
 				} //a
 
+					.trapezoid {
+						border-bottom: 20px solid red;
+						border-left: 35px solid transparent;
+						border-right: 35px solid transparent;
+						height: 0;
+						width: 100px;
+
+						//rotate
+						/* Safari */
+						-webkit-transform: rotate(45deg);
+
+						/* Firefox */
+						-moz-transform: rotate(45deg);
+
+						/* IE */
+						-ms-transform: rotate(45deg);
+
+						/* Opera */
+						-o-transform: rotate(45deg);
+
+						/* Internet Explorer */
+						filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+
+						}
+					}
+
+
+
 				.acquired {
 					padding-top: 90px;
+
+					.companyname {
+						margin-top: 103.5px;
+					}
 
 					.banner {
 						text-transform: uppercase;
 						background-color: #ff0000;
 						border-bottom: 2px solid black;
 					}
+
 				}
 					.rollover {
 						display:none;
@@ -740,23 +775,36 @@ body {
 		} // pure
 	} // #wanttoknow
 
-	form {
+.buttonwrap {
+	height: 150px;
+
+
+.button {
 		width: 232px;
+		height: 35px;
 		margin: 0 auto;
-		#getintouch {
-			width: 232px;
-			margin: 0 auto;
-			height: 35px;
-			background-color: #ec1c2d;
-			border: none;
+		margin-bottom: 100px;
+		margin-top: 60px;
+		background-color: #ec1c2d;
+				a {
+			// width: 232px;
+			padding-left: 41.5px;
+			padding-right:41.5px;
+			line-height: 20px;
+			position:relative;
 			color: white;
-			padding-top: 9px;
-			margin-bottom: 100px;
-			margin-top: 60px;
-		}// form
+			padding-top: 15px;
+			display:block;
+			top: -3px;
+			}// form
+		
+}
 }
 
 //--------------------TEAM PAGE STYLES ---------------------------
+#team .titlebox h1 {
+	width: 488px;
+}
 
 #teamgrid {
 	width: 1020px;
@@ -875,6 +923,12 @@ body {
 	margin: 0 auto;
 	margin-top: 20px;
 
+}
+
+// JOBS PAGE
+/*------------------------------------------------------------- */
+#jobs {
+	letter-spacing: 1px;
 }
 
 
