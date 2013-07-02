@@ -502,6 +502,8 @@ a {
     font-family: "ProximaNova-Bold";
     font-size: 16px;
     color:white;
-    
-
+    line-height: 23px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    text-align: center;
 }
