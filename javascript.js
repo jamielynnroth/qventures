@@ -1,6 +1,6 @@
 
 	// Show and Hide Rollover state of MadeinNY heart
-		$(function() {
+		$(document).ready(function() {
 			$('#madeinny').hover(function() {
 				// console.log('poop');
 				$('#whiteheart').removeClass('show');
@@ -50,3 +50,15 @@
 			
 			});
 		});
+// Jobs Page 
+
+// $(document).ready(function() {
+// 	var listStartups = function() {
+// 		$.getJSON('https://api.angel.co/1/startups/117927/roles?direction=outgoing&role=past_investor' + '&callback=?', function(json) {
+// 		console.log(json);
+// 		$('#jobs').html("<h2>We've invested in</h2><img src=" + startup_roles[0] + "/>");
+// 	});
+// 	};
+
+// 	listStartups();
+// });
