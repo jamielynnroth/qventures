@@ -2,6 +2,8 @@
 @import url('typography.css');
 @import url('css/buttons.less');
 
+@black: #00000;
+
 html {
 	width:100%;
 	height:100%;
@@ -66,14 +68,14 @@ a:hover {
 // NAV BAR STYLES FOR HEADER AND FOOTER
 //---------------------------------------------------------------
 .header {
-	background-color:black;
 	color:white;
 	top:0;
 	position:relative;
 	display:block;
 	width: 100%;
-	height: 330px;
+	height: 380px;
 	padding-bottom: 25px;
+	background: black; // make nav black 100%
 } // header
 
 
@@ -224,11 +226,13 @@ a:hover {
 	.headimg {
 		margin: 0 auto;
 		width: 100%;
-		background-color:black;
+		// background-color:black;
 		height:330px;
 
 		img {
-			width: 1200px;
+			// width: 1200px;
+			min-width: 1600px;
+			height: 330px;
 			margin: 0 auto;
 			display:block;
 		}
@@ -259,10 +263,20 @@ a:hover {
 	} // titlebox
 } // header
 
-.portfolio body {
-	height:100%;
-	background-color:black;
-	margin: 0 auto;
+.portfolio {
+
+	.headimg {
+		background: 
+			url('assets/images/diagonaloverlay4x4px 2.png') repeat,
+			url(assets/images/portfolio1600.png) no-repeat, 
+			@black;
+	}
+	
+	body {
+		height:100%;
+		background-color:black;
+		margin: 0 auto;
+	}
 }
 
 #portfolio {
@@ -314,6 +328,10 @@ a:hover {
 			padding-top: 20px;
 
 		// Global formatting for each card 
+
+			.hide {
+				display:none;
+			}
 
 			.pure-g-r {
 				box-sizing:border-box;
@@ -631,9 +649,20 @@ a:hover {
 
 //--------------------CONTACT PAGE STYLES ---------------------------
 
+.contact {
+		.headimg {
+		background: 
+			url('assets/images/diagonaloverlay4x4px 2.png') repeat,
+			url(assets/images/contact1600.png) no-repeat, 
+			@black;
+	}
+}
+
+
 #contact {
 	width: 1020px;
 	margin: 0 auto;
+
 
 	#email {
 
@@ -701,6 +730,14 @@ a:hover {
 
 //--------------------PHILOSPHY PAGE STYLES ---------------------------
 
+.philosophy {
+	.headimg {
+		background: 
+			url('assets/images/diagonaloverlay4x4px 2.png') repeat,
+			url(assets/images/philosophy1600.png) no-repeat, 
+			@black;
+	}
+}
 #weInvest {
 	width: 1020px;
 	margin: 0 auto;
@@ -789,6 +826,15 @@ a:hover {
 //--------------------TEAM PAGE STYLES ---------------------------
 #team .titlebox h1 {
 	width: 488px;
+}
+
+.team {
+		.headimg {
+		background: 
+			url('assets/images/diagonaloverlay4x4px 2.png') repeat,
+			url(assets/images/team1600.png) no-repeat, 
+			@black;
+	}
 }
 
 #teamgrid {
@@ -900,6 +946,16 @@ a:hover {
 		display:block !important;
 	}
 
+.news {
+	.headimg {
+		background: 
+			url('assets/images/diagonaloverlay4x4px 2.png') repeat,
+			url(assets/images/news1600.png) no-repeat, 
+			@black;
+	}
+
+}
+
 
 .news #tint {
 	max-width: 1200px;
@@ -912,6 +968,17 @@ a:hover {
 /*------------------------------------------------------------- */
 #jobs {
 	letter-spacing: 1px;
+
+}
+
+.jobs {
+
+	.headimg {
+		background: 
+			url('assets/images/diagonaloverlay4x4px 2.png') repeat,
+			url(assets/images/jobs1600.png) no-repeat, 
+			@black;
+	}
 }
 
 // SPLASH PAGE

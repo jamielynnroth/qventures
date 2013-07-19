@@ -50,6 +50,34 @@
 			
 			});
 		});
+
+// Portfolio Page- Filter companies by coast
+		$(function () {
+			// Show east coast only when east is clicked
+			$('#filterEast').click(function() {
+				$('#companygrid').find('.east').removeClass('hide');
+				$('#companygrid').find('.west').addClass('hide');
+				$('#companygrid').find('.acquired').addClass('hide');
+			});
+			// Show west coast only when west is clicked
+			$('#filterWest').click(function() {
+				$('#companygrid').find('.west').removeClass('hide');
+				$('#companygrid').find('.east').addClass('hide');
+				$('#companygrid').find('.acquired').addClass('hide');
+			});
+			// Show all companies
+			$('#showAll').click(function() {
+				$('#companygrid').find('.west').removeClass('hide');
+				$('#companygrid').find('.east').removeClass('hide');
+				$('#companygrid').find('.acquired').removeClass('hide');
+			});
+
+		});
+
+
+
+
+
 // Jobs Page 
 
 // $(document).ready(function() {
