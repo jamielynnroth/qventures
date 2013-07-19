@@ -1,4 +1,7 @@
 
+	// All Pages
+
+
 	// Show and Hide Rollover state of MadeinNY heart
 		$(document).ready(function() {
 			$('#madeinny').hover(function() {
@@ -22,6 +25,8 @@
 				$(this).show('.rollover');
 			});
 		});
+
+
 
 // Team page toggle show .rollover state on hover for small blocks
 		$(function () {
@@ -51,28 +56,41 @@
 			});
 		});
 
-// Portfolio Page- Filter companies by coast
+// Portfolio Page- Filter companies by coast and animate selected bar
 		$(function () {
 			// Show east coast only when east is clicked
 			$('#filterEast').click(function() {
+				$('#bar').find('img').animate({
+					left: "152px"}, 1000, function() {
+						//animation complete
+					});
 				$('#companygrid').find('.east').removeClass('hide');
 				$('#companygrid').find('.west').addClass('hide');
 				$('#companygrid').find('.acquired').addClass('hide');
 			});
 			// Show west coast only when west is clicked
 			$('#filterWest').click(function() {
+				$('#bar').find('img').animate({
+					left: "304px"}, 1000, function() {
+						//animation complete
+					});
 				$('#companygrid').find('.west').removeClass('hide');
 				$('#companygrid').find('.east').addClass('hide');
 				$('#companygrid').find('.acquired').addClass('hide');
 			});
 			// Show all companies
 			$('#showAll').click(function() {
+				$('#bar').find('img').animate({
+					left: "0"}, 1000, function() {
+						//animation complete
+					});
 				$('#companygrid').find('.west').removeClass('hide');
 				$('#companygrid').find('.east').removeClass('hide');
 				$('#companygrid').find('.acquired').removeClass('hide');
 			});
 
-		});
+
+		}); // fn
 
 
 
