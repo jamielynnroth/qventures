@@ -364,23 +364,23 @@
     font-style: normal;
 }
 
-
-
-
+body {
+    font-size: 100%;
+}
 
 h1{
     font-family: 'DINNextLTPro-LightCondensed';
-    font-size: 97px;
+    font-size: 6.0625em; 
     color:white;
     text-transform: uppercase;
     font-weight:normal;
-    line-height: 97px;
+    line-height: 6.0625em;
 }
 
 
 h2 {
     font-family: 'DINNextLTPro-LightCondensed';
-    font-size: 36px;
+    font-size: 2.25em;
     color:black;
     text-transform: uppercase;
     font-weight:normal;
@@ -389,44 +389,44 @@ h2 {
 
 h3 {
     font-family: 'DINNextLTPro-Bold';
-    font-size: 14px;
+    font-size: .875em;
     color:black;
     text-transform: uppercase;
     font-weight:bold;
-    letter-spacing: 1px;
+    letter-spacing: .0625em;
 }
 
 h4 { 
     font-family: "DINNextLTPro-Medium";
-    font-size: 14px;
+    font-size: .875em;
     color:black;
     text-transform: uppercase;
 }
 
 h5 {
 	font-family: 'DINNextLTPro-Regular';
-	font-size: 14px;
+	font-size: .875em;
 	font-weight: normal;
-	letter-spacing: 1px;
+	letter-spacing: .0625em;
     text-transform: uppercase;
 }
 
 h6 {
     font-family: "ProximaNova-Regular";
     color: #666666;
-    font-size: 19px;
-    line-height: 25px;
+    font-size: 1.1875em;
+    line-height: 1.5625em;
     letter-spacing: 0;
 }
 
 .philosophy h6 {
-    font-size: 16px;
-    line-height: 21px;
+    font-size: 1em;
+    line-height: 1.3125em;
 }
 
 .team h6 {
-    font-size: 16px;
-    line-height: 21px;
+    font-size: 1em;
+    line-height: 1.3125em;
 }
 
 h6 a {
@@ -442,7 +442,7 @@ h6 span {
 .companyname {
     font-family: "ProximaNova-Bold"; 
     font-weight:normal;
-    font-size: 19px;
+    font-size: 1.1875em;
     color: black;
     text-align:center;
     /*margin-top: 85px;*/
@@ -451,7 +451,7 @@ h6 span {
 .city {
     font-family: "ProximaNova-Bold"; 
     font-weight:normal;
-    font-size: 19px;
+    font-size: 1.1875em;
     color: #666666;
     text-align:center;
 }
@@ -468,8 +468,8 @@ a {
 
 .philosophy h2 {
     font-family: "DINNextLTPro-MediumCond";
-    font-size: 50px;
-    letter-spacing: .9px;
+    font-size: 3.125em;
+    letter-spacing: .05625em;
 }
 
 #wanttoknow h3 {
@@ -478,31 +478,31 @@ a {
 
 .button {
     font-family: "DINNextLTPro-Heavy";
-    font-size: 20px;
+    font-size: 1.25em;
     text-transform: uppercase;
     color:white;
     margin: 0 auto;
     font-weight:normal;
-    letter-spacing: 2px;
+    letter-spacing: .125em;
 }
 
 .team h2 {
-    font-size: 55px;
+    font-size: 3.4375em;;
     color: white;
     font-weight:normal;
 }
 
 .name {
     font-family: "ProximaNova-Bold";
-    font-size: 20px;
+    font-size: 3.4375em;
     color:white;
 }
 
 .title {
     font-family: "ProximaNova-Bold";
-    font-size: 16px;
+    font-size: 1em;
     color:white;
-    line-height: 23px;
+    line-height: 1..4375em;
     vertical-align: middle;
     text-transform: uppercase;
     text-align: center;

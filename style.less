@@ -672,7 +672,7 @@ a:hover {
 
 
 #contact {
-	width: 1020px;
+	max-width: 1020px;
 	margin: 0 auto;
 
 
@@ -709,7 +709,9 @@ a:hover {
 		#map {
 			margin-top: 90px;
 			clear: both;
-			width: 100%;
+			width: 97%;
+			margin-left:auto;
+			margin-right:auto;
 
 			h2 {
 				display:block;
@@ -1033,4 +1035,26 @@ a:hover {
 // 		}
 // 	}
 // }
+
+@media (max-width: 480px) {
+	#teamgrid {
+		width: 480px;
+		
+		.pure-u-1-2 {
+			height: 230px;
+		}
+		.pure-u-1-4, .categoryblock {
+			float:left;
+			width: 240px;
+			height: 230px;
+		}
+		.shade, .rollover {
+			height: 230px !important;
+			width: 240px !important;
+		}
+		.rollover {
+			top: -233px;
+		}
+	}
+}
 

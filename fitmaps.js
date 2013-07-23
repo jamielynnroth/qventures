@@ -1,27 +1,27 @@
-FitMaps 1.0
-A lightweight, easy-to-use jQuery plugin for fluid width Google maps embeds. FitMaps achieves fluid width maps in your responsive web design.
+//FitMaps 1.0
+// A lightweight, easy-to-use jQuery plugin for fluid width Google maps embeds. FitMaps achieves fluid width maps in your responsive web design.
 
-The following license means:
-everyone can use and modify this plugin without restriction and for free, even for commercial purposes;
-the only restriction is that you in turn don't put any restrictions on the use of this code, original or modified.
+// The following license means:
+// everyone can use and modify this plugin without restriction and for free, even for commercial purposes;
+// the only restriction is that you in turn don't put any restrictions on the use of this code, original or modified.
 
-== Licensing information ==
-Copyright (C) 2012 Herman van der Maas, www.waywayway.nl
+// == Licensing information ==
+// Copyright (C) 2012 Herman van der Maas, www.waywayway.nl
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
 
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
-== end licensing information ==
-*/
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+// == end licensing information ==
+// */
 
 (function( $ ){
     
