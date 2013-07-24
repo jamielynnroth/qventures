@@ -308,7 +308,7 @@
 
 @font-face {
     font-family: 'DINNextLTPro-Bold';
-    src:   url('assets/webfonts/DINNextLTProDINNextLTPro-Bold.ttf') format('truetype');
+    src:  url('assets/webfonts/DINNextLTPro/DINNextLTPro-Bold.ttf') format('truetype');
   /*  src: url('assets/webfonts/DINNextLTPro/DINNextLTPro-Bold.eot');
     src: url('assets/webfonts/DINNextLTPro/DINNextLTPro-Bold.eot?#iefix') format ('embedded-opentype'),
     url('assets/webfonts/DINNextLTPro/DINNextLTPro-Bold.woff') format('woff'), 
