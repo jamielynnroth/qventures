@@ -29,6 +29,10 @@ a:hover {
 	background: url('assets/images/diagonaloverlay4x4px 2.png') repeat,
 				url("assets/images/home1600.png") center no-repeat,
 				@black;
+-webkit-background-size: cover, cover;
+   -moz-background-size: cover, cover;
+	 -o-background-size: cover, cover;
+		background-size: cover, cover;	
 	height:100%;
 	margin: 0 auto;
 
@@ -345,7 +349,7 @@ a:hover {
 			}
 
 			.pure-u-1-4 {
-				height: 245px;
+				// height: 245px;
 				// border: 1px solid black;
 				box-sizing: border-box;
 				a {
@@ -1036,7 +1040,11 @@ a:hover {
 // 	}
 // }
 
+
 @media (max-width: 480px) {
+	html {
+		width: 480px;
+	}
 	#teamgrid {
 		width: 480px;
 		
@@ -1049,8 +1057,8 @@ a:hover {
 			height: 230px;
 		}
 		.shade, .rollover {
-			height: 230px !important;
-			width: 240px !important;
+			height: 230px ;
+			width: 240px ;
 		}
 		.rollover {
 			top: -233px;
@@ -1058,3 +1066,42 @@ a:hover {
 	}
 }
 
+@media (min-width: 480px) and (max-width: 768px) {
+// 	html {
+// 		width: 768px;
+// 	}
+	#teamgrid {
+		width: 100%;
+		max-width: 786px;
+
+		.liner {
+			padding: 0 0 0 20px;
+		}
+
+		.pure-u-1-2 {
+			// height: 186px;
+			// width: 389px;
+			
+
+		}
+// 			.categoryblock {
+// 				line-height: 184px;
+// 			}
+			.pure-u-1-4, .categoryblock {
+			width: 33.33333333%;
+			// height: 245px;
+			float:left;
+// 			width: 25%;
+// 			height: 184px;
+// 			// width: 240px;
+// 			// height: 230px;
+		}
+// 		.shade, .rollover {
+// 			height: 184px;
+// 			width: 192px;
+// 		}
+// 		.rollover {
+// 			top: -187px;
+// 		}
+ 	}
+ }
