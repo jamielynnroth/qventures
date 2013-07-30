@@ -314,7 +314,7 @@
     url('assets/webfonts/DINNextLTPro/DINNextLTPro-Bold.woff') format('woff'), 
     url('assets/webfonts/DINNextLTProDINNextLTPro-Bold.ttf') format('truetype'), 
     url('assets/webfonts/DINNextLTProDINNextLTPro-Bold.svg') format('svg');*/
-    font-weight: bold;
+    /*font-weight: bold;*/
     font-style: normal;
 }
 
