@@ -92,7 +92,23 @@
 
 		}); // fn
 
- 
+$(function () {
+ 	$('#nav1').hover(function() {
+ 		console.log('hover!');
+ 		$('.navselected').animate({
+ 			left: "308"}, 1000, function() {
+ 				//animation complete
+ 			}); // animate
+ 	}); // hover
+
+ 	 $('#nav2').hover(function() {
+ 		console.log('hover!');
+ 		$('.navselected').animate({
+ 			left: "419"}, 1000, function() {
+ 				//animation complete
+ 			}); // animate
+ 	}); // hover
+}); // fn
 
 
 // Jobs Page 
