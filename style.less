@@ -22,6 +22,10 @@ body {
 a:hover {
 	text-decoration: none;
 }
+
+.hide {
+	display:none !important;
+}
 // HOME PAGE 
 //------------------------------------------------------------------
 
@@ -80,6 +84,7 @@ a:hover {
 	height: 380px;
 	padding-bottom: 25px;
 	background: black; // make nav black 100%
+
 } // header
 
 
@@ -107,7 +112,7 @@ a:hover {
 		
 		.nav {
 			width: 1200px;
-			height:auto;
+			height:100%
 			margin: 0 auto;
 		} // nav
 
@@ -115,6 +120,7 @@ a:hover {
 		.navselected {
 			position:absolute;
 			display:block;
+
 			// right: 0;
 		}
 		#logo, #nav, #social {
@@ -122,9 +128,7 @@ a:hover {
 			float:left;
 		} // logo nav social
 		
-		#nav {
-			margin-top: 32px;
-		} //#nav
+
 
 		#logo {
 			margin-left: 100px;
@@ -197,14 +201,22 @@ a:hover {
 		#nav {
 			margin-left: 10px;
 			ul {
+				height: 100%;
 				li {
 				display:inline;
 				text-transform: uppercase;
-				padding-right: 45px;
+				// padding-right: 45px;
+				line-height: 75px;
+				padding-top: 30px;
+				padding-bottom: 30px;
 				} // li
 		 		 a { 
 					text-decoration: none;
 					color:white;
+					padding-top: 30px;
+					padding-bottom: 30px;
+					margin-right: 45px;
+
 				} //a
 			} //ul 
 		} // #nav

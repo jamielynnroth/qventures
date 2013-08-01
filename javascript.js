@@ -89,26 +89,80 @@
 				$('#companygrid').find('.acquired').removeClass('hide');
 			});
 
+// Rollover feedback on nav bar 
+	$('#nav a').hover(function() {
+		console.log("hover!");
+		var $el = $(this);
+		var leftPos = $el.position().left - ($('.navselected').width() - $el.width())/2;
+		$('.navselected').stop().animate({
+			left: leftPos}, 400, function() {
+				$('.navselected').fadeIn(400);
+			});
+	}, function () {
+		$('.navselected').stop().fadeOut(400);
+	})
 
-		}); // fn
-
-$(function () {
- 	$('#nav1').hover(function() {
- 		console.log('hover!');
- 		$('.navselected').animate({
- 			left: "308"}, 1000, function() {
- 				//animation complete
- 			}); // animate
- 	}); // hover
-
- 	 $('#nav2').hover(function() {
- 		console.log('hover!');
- 		$('.navselected').animate({
- 			left: "419"}, 1000, function() {
- 				//animation complete
- 			}); // animate
- 	}); // hover
 }); // fn
+
+	// $('#nav').hover(
+	// 	function() {
+	// 	$('.navselected').stop().fadeIn(400).css({display: "block"});
+	// }, 
+	// 	function() {
+	// 	$('.navselected').stop().fadeOut(400).css({display: 'none'});
+	// }
+	// );	
+
+
+//  	$('#nav1').hover(function() {
+//  		console.log('hover!');
+//  		$('.navselected').delay(-100).animate({
+//  			left: "308"}, 500, function() {
+//  				//animation complete
+//  			}); // animate
+//  	}); // hover
+
+//  	 $('#nav2').hover(function() {
+//  		console.log('hover!');
+//  		$('.navselected').animate({
+//  			left: "419"}, 500, function() {
+//  				//animation complete
+//  			}); // animate
+//  	}); // hover
+
+//  	 $('#nav3').hover(function() {
+//  		console.log('hover!');
+//  		$('.navselected').animate({
+//  			left: "530"}, 500, function() {
+//  				//animation complete
+//  			}); // animate
+//  	}); // hover
+
+//  	$('#nav4').hover(function() {
+//  		console.log('hover!');
+//  		$('.navselected').animate({
+//  			left: "645"}, 500, function() {
+//  				//animation complete
+//  			}); // animate
+//  	}); // hover
+
+//  	 $('#nav5').hover(function() {
+//  		console.log('hover!');
+//  		$('.navselected').animate({
+//  			left: "735"
+//  		}, 500, function() {
+//  				//animation complete
+//  			}); // animate
+//  	}); // hover
+
+//  	$('#nav6').hover(function() {
+//  		console.log('hover!');
+//  		$('.navselected').animate({
+//  			left: "830"}, 500, function() {
+//  				//animation complete
+//  			}); // animate
+//  	}); // hover
+//}); // fn
 
 
 // Jobs Page 
