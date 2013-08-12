@@ -89,80 +89,70 @@
 				$('#companygrid').find('.acquired').removeClass('hide');
 			});
 
-// Rollover feedback on nav bar 
+		}); //fn
+
+//NAVIGATION BAR ANIMATIONS
+
+$(function () {
+	// First check what page is loaded 
+	var url = window.location.href;
+	var urlArray = url.split('/');
+	var currentPage= urlArray[urlArray.length-1];
+//Rollover feedback on nav bar 
+$('#nav').hover(function() {
 	$('#nav a').hover(function() {
 		console.log("hover!");
 		var $el = $(this);
 		var leftPos = $el.position().left - ($('.navselected').width() - $el.width())/2;
 		$('.navselected').stop().animate({
 			left: leftPos}, 400, function() {
-				$('.navselected').fadeIn(400);
-			});
-	}, function () {
-		$('.navselected').stop().fadeOut(400);
-	})
+				$('.navselected').removeClass('hide');
+				$('.navselected').stop().fadeIn(400);	
+
+			} //animate callback
+			); // animate fn
+	}); // nav a hover
+		}, function () {
+			// On the landing page, make red bar disappear when nav is not being hovered upon
+			if (currentPage === 'index') {
+				$('.navselected').stop().fadeOut(400);
+			}
+			else {
+				// On any other page besides the home page
+				// Slide the bar back to the current page when nav is not being hovered upon
+				// for each link in the nav bar:
+				$('#nav ul a').each(function() {
+					
+					// For each link in the navbar, get the pathname
+					var $el = $(this); 
+					var pathname= $el.attr('href').split('/');
+					pathname = pathname[pathname.length-1];
+
+					// If the pathname is the same as the page that is loaded 
+					if (pathname === currentPage) {
+							// Get the position of the link and center check the left position
+							// to appropriately center the bar above it
+						var navItemWidth = $(this).width();
+						var barWidth = 110;
+						var diff = barWidth - navItemWidth;
+						var balance = diff/2;
+						var origLeftPos= $(this).position().left - balance;
+						// Move the bar to the correct position and then show it if its not already
+						$('.navselected').stop().animate({
+							left: origLeftPos}, 400, function() {
+								//animation complete
+								$('.navselected').removeClass('hide');
+							});
+						}
+					});	
+			}
+        });// hover
+
+// force event to fire first time
+$('#nav').trigger('mouseout');
 
 }); // fn
 
-	// $('#nav').hover(
-	// 	function() {
-	// 	$('.navselected').stop().fadeIn(400).css({display: "block"});
-	// }, 
-	// 	function() {
-	// 	$('.navselected').stop().fadeOut(400).css({display: 'none'});
-	// }
-	// );	
-
-
-//  	$('#nav1').hover(function() {
-//  		console.log('hover!');
-//  		$('.navselected').delay(-100).animate({
-//  			left: "308"}, 500, function() {
-//  				//animation complete
-//  			}); // animate
-//  	}); // hover
-
-//  	 $('#nav2').hover(function() {
-//  		console.log('hover!');
-//  		$('.navselected').animate({
-//  			left: "419"}, 500, function() {
-//  				//animation complete
-//  			}); // animate
-//  	}); // hover
-
-//  	 $('#nav3').hover(function() {
-//  		console.log('hover!');
-//  		$('.navselected').animate({
-//  			left: "530"}, 500, function() {
-//  				//animation complete
-//  			}); // animate
-//  	}); // hover
-
-//  	$('#nav4').hover(function() {
-//  		console.log('hover!');
-//  		$('.navselected').animate({
-//  			left: "645"}, 500, function() {
-//  				//animation complete
-//  			}); // animate
-//  	}); // hover
-
-//  	 $('#nav5').hover(function() {
-//  		console.log('hover!');
-//  		$('.navselected').animate({
-//  			left: "735"
-//  		}, 500, function() {
-//  				//animation complete
-//  			}); // animate
-//  	}); // hover
-
-//  	$('#nav6').hover(function() {
-//  		console.log('hover!');
-//  		$('.navselected').animate({
-//  			left: "830"}, 500, function() {
-//  				//animation complete
-//  			}); // animate
-//  	}); // hover
-//}); // fn
 
 
 // Jobs Page 
