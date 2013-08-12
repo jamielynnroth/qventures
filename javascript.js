@@ -60,7 +60,8 @@
 		$(function () {
 			// Show east coast only when east is clicked
 			$('#filterEast').click(function() {
-				$('#bar').find('img').animate({
+				console.log('east');
+				$('#redbar').stop().animate({
 					left: "152px"}, 1000, function() {
 						//animation complete
 					});
@@ -70,7 +71,7 @@
 			});
 			// Show west coast only when west is clicked
 			$('#filterWest').click(function() {
-				$('#bar').find('img').animate({
+				$('#redbar').stop().animate({
 					left: "304px"}, 1000, function() {
 						//animation complete
 					});
@@ -80,7 +81,7 @@
 			});
 			// Show all companies
 			$('#showAll').click(function() {
-				$('#bar').find('img').animate({
+				$('#redbar').stop().animate({
 					left: "0"}, 1000, function() {
 						//animation complete
 					});

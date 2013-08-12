@@ -3,6 +3,7 @@
 @import url('css/buttons.less');
 
 @black: #00000;
+@red:   #ff0000;
 
 html {
 	width:100%;
@@ -23,6 +24,14 @@ body {
 
 a:hover {
 	text-decoration: none;
+}
+
+.clearfix:after { 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
 }
 
 .hide {
@@ -340,6 +349,11 @@ a:hover {
 				float:left;
 				height: 50px;
 				width: 150px;
+				cursor:pointer;
+
+				h3 {
+					cursor:pointer;
+				}
 			}
 
 			.bar {
@@ -499,6 +513,11 @@ a:hover {
 
 				} // .acquired 
 
+				#admittedly {
+					background-image: url('assets/portfoliologos/admittedly.png');
+					background-repeat:no-repeat;
+					background-position: center;
+				}
 
 				#artsicle {
 					background-image: url('assets/portfoliologos/artsicle.png');
@@ -528,11 +547,11 @@ a:hover {
 					background-position: center;
 				}
 
-				#brightnest {
-					background-image: url('assets/portfoliologos/brightnest.png');
-					background-repeat:no-repeat;
-					background-position: center;
-				}
+				// #brightnest {
+				// 	background-image: url('assets/portfoliologos/brightnest.png');
+				// 	background-repeat:no-repeat;
+				// 	background-position: center;
+				// }
 				#circa {
 					background-image: url('assets/portfoliologos/circa.png');
 					background-repeat:no-repeat;
@@ -875,6 +894,53 @@ a:hover {
 	width: 488px;
 }
 
+// .inside {
+// 	border: 1px dashed white;
+// }
+
+// .top {
+// 	border-top: 1px dashed white;
+// }
+// .right {
+// 	border-right: 1px dashed white;
+// }
+
+// .bottom {
+// 	border-bottom: 1px dashed white;
+// }
+
+.dashedLineH {
+	background:@black;
+	height:1px;
+	clear:both;
+	width: 100%;
+
+	hr {
+		// color:white;
+		border-top: 1px dashed white;
+		margin: 0;
+	}
+}
+
+.shortLine {
+	width:50%;
+}
+
+.spacer {
+	margin-top: 1px;
+}
+
+.floatRight {
+	float:right;
+}
+.vertLine {
+	width:1px;
+	height: 245px;
+	background:black;
+	float:left;
+	background: url('assets/images/diagonaloverlay4x4px 2.png') repeat, @black;
+}
+
 .team {
 	// .navselected {
 	// 	position:relative;
@@ -889,11 +955,14 @@ a:hover {
 	}
 }
 
+
 #teamgrid {
-	width: 1020px;
+	width: 1024px;
 	margin: 0 auto;
 	margin-top: 60px;
 	padding-bottom: 60px;
+	display: table;
+	// background: @black;
 
 	.show {
 		display:block;
@@ -912,12 +981,19 @@ a:hover {
 		height: 245px;
 		// border: 1px dashed white;
 		box-sizing:border-box;
+		float:left;
+	
+		width:510px;
 	}
 
 	.pure-u-1-4 {
 		height: 245px;
 		// border: 1px dashed white;
 		box-sizing:border-box;
+		width: 255px;
+		float:left;
+		display:table-cell;
+		border-collapse:collapse;
 	}
 
 	.categoryblock {
@@ -926,8 +1002,7 @@ a:hover {
 		text-align:center;
 		line-height: 245px;
 		border-left: none;
-		border-top: 1px dashed white;
-		border-bottom:1px dashed white;
+		// border-bottom:1px dashed white;
 	}
 	.long {
 			line-height: 55px;
@@ -947,7 +1022,8 @@ a:hover {
 			background-color:black;
 			opacity: .7;
 			z-index: 3;
-			height: 245px;
+			height: 100%;
+			width:100%;
 			// top: -215px;
 			// position: relative;
 			display: block;
