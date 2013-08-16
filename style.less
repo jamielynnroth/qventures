@@ -3,6 +3,7 @@
 @import url('css/buttons.less');
 
 @black: #00000;
+@red:   #ff0000;
 
 html {
 	width:100%;
@@ -15,12 +16,26 @@ html {
 
 body {
 	height: 100%;
+	height: auto;
+	min-height: 100%;
 	margin: 0 auto; // prevent body from collapsing on grid pages
 }
 
 
 a:hover {
 	text-decoration: none;
+}
+
+.clearfix:after { 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+
+.hide {
+	display:none !important;
 }
 // HOME PAGE 
 //------------------------------------------------------------------
@@ -80,6 +95,7 @@ a:hover {
 	height: 380px;
 	padding-bottom: 25px;
 	background: black; // make nav black 100%
+
 } // header
 
 
@@ -107,18 +123,23 @@ a:hover {
 		
 		.nav {
 			width: 1200px;
-			height:auto;
+			height:100%;
 			margin: 0 auto;
 		} // nav
 
+		
+		.navselected {
+			position:absolute;
+			display:block;
+
+			// right: 0;
+		}
 		#logo, #nav, #social {
 			display: inline;
 			float:left;
 		} // logo nav social
 		
-		#nav {
-			margin-top: 32px;
-		} //#nav
+
 
 		#logo {
 			margin-left: 100px;
@@ -127,8 +148,8 @@ a:hover {
 		} //logo
 
 		#social {
-			padding-top: 25px;
-			height: 50px;
+			padding-top: 19.5px;
+			height: 33px;
 			width: 140px;
 			// margin-left: 60px;
 
@@ -180,7 +201,7 @@ a:hover {
 						border-top: 6px solid #ffffff;
 						position:absolute;
 						top: 15px;
-						right: 125px !important;
+						right: 130px !important;
 					} // arrow
 
 				} // #hoverstate
@@ -191,14 +212,25 @@ a:hover {
 		#nav {
 			margin-left: 10px;
 			ul {
+				//Margins to balance due to removing jobs link 
+				margin-left: 41px;
+				margin-right: 41px;
+				height: 100%;
 				li {
 				display:inline;
 				text-transform: uppercase;
-				padding-right: 45px;
+				// padding-right: 45px;
+				line-height: 75px;
+				padding-top: 30px;
+				padding-bottom: 30px;
 				} // li
 		 		 a { 
 					text-decoration: none;
 					color:white;
+					padding-top: 30px;
+					padding-bottom: 30px;
+					margin-right: 45px;
+
 				} //a
 			} //ul 
 		} // #nav
@@ -211,7 +243,7 @@ a:hover {
 	#hoverstate {
 		#textbox {
 			top: 15px !important;
-			left: 68px !important;
+			left: 70px !important;
 			-webkit-box-shadow: -2px 2px 0px rgba(0, 0, 0, 1);
 			-moz-box-shadow:    -2px 2px 0px rgba(0, 0, 0, 1);
 			box-shadow:         -2px 2px 0px rgba(0, 0, 0, 1);
@@ -219,7 +251,7 @@ a:hover {
 
 		#arrow {
 			//change arrow to pointing up
-			top:58px !important;
+			top:64px !important;
 			right: 157px !important;
 			border-bottom: 6px solid #ffffff !important;
 			border-top: none !important;
@@ -270,17 +302,21 @@ a:hover {
 } // header
 
 .portfolio {
-	.navselected {
-		position:relative;
-		display:block;
-		left: -5px;
-	}
+	// .navselected {
+	// 	position:relative;
+	// 	display:block;
+	// 	left: -5px;
+	// }
 
 	.headimg {
 		background: 
 			url('assets/images/diagonaloverlay4x4px 2.png') center repeat,
 			url(assets/images/portfolio1600.png) center no-repeat, 
 			@black;
+-webkit-background-size: cover, cover;
+   -moz-background-size: cover, cover;
+	 -o-background-size: cover, cover;
+		background-size: cover, cover;	
 	}
 	
 	body {
@@ -306,32 +342,34 @@ a:hover {
 			float:left;
 			left: 300px;
 			position:relative;
+			width: 450px;
 
-			#bar {
-				background-color:black;
-				width:450px;
-				height: 5px;
+			#redbar {
+				// display:block;
+				position:absolute;
+			}
 
-				img {
-					display:block;
-					position:relative;
+			#showAll, #filterEast, #filterWest {
+				float:left;
+				height: 50px;
+				width: 150px;
+				cursor:pointer;
+
+				h3 {
+					cursor:pointer;
 				}
+			}
+
+			.bar {
+				background-color:black;
+				width:150px;
+				height: 5px;
 			} //bar 
 			
-			ul {
+			h3 {
 				text-align:center;
 				margin-top: 15px;
-			
-				li {
-				display:inline;
-				}
-				li:first-child {
-					padding-right: 50px;
-				}
-				li:nth-child(2) {
-					padding-right:50px;
-				}
-			} //ul 
+			} //h3 
 		} // filter
 
 		#companygrid {
@@ -479,6 +517,11 @@ a:hover {
 
 				} // .acquired 
 
+				#admittedly {
+					background-image: url('assets/portfoliologos/admittedly.png');
+					background-repeat:no-repeat;
+					background-position: center;
+				}
 
 				#artsicle {
 					background-image: url('assets/portfoliologos/artsicle.png');
@@ -508,11 +551,11 @@ a:hover {
 					background-position: center;
 				}
 
-				#brightnest {
-					background-image: url('assets/portfoliologos/brightnest.png');
-					background-repeat:no-repeat;
-					background-position: center;
-				}
+				// #brightnest {
+				// 	background-image: url('assets/portfoliologos/brightnest.png');
+				// 	background-repeat:no-repeat;
+				// 	background-position: center;
+				// }
 				#circa {
 					background-image: url('assets/portfoliologos/circa.png');
 					background-repeat:no-repeat;
@@ -664,16 +707,20 @@ a:hover {
 //--------------------CONTACT PAGE STYLES ---------------------------
 
 .contact {
-	.navselected {
-		position:relative;
-		display:block;
-		left: 517px;
-	}
+	// .navselected {
+	// 	position:absolute;
+	// 	display:block;
+	// 	left: 517px;
+	// }
 		.headimg {
 		background: 
 			url('assets/images/diagonaloverlay4x4px 2.png') repeat,
 			url(assets/images/contact1600.png) no-repeat, 
 			@black;
+		-webkit-background-size: cover, cover;
+		   -moz-background-size: cover, cover;
+			 -o-background-size: cover, cover;
+				background-size: cover, cover;	
 	}
 }
 
@@ -753,17 +800,21 @@ a:hover {
 
 .philosophy {
 
-	.navselected {
-		position:relative;
-		display:block;
-		left: 218px;
-	}
+	// .navselected {
+	// 	position:relative;
+	// 	display:block;
+	// 	left: 218px;
+	// }
 	.headimg {
 		background: 
 			url('assets/images/diagonaloverlay4x4px 2.png') repeat,
 			url(assets/images/philosophy1600.png) no-repeat, 
 			@black;
-	}
+		-webkit-background-size: cover, cover;
+		   -moz-background-size: cover, cover;
+			 -o-background-size: cover, cover;
+				background-size: cover, cover;	
+			}
 }
 #weInvest {
 	width: 1020px;
@@ -826,6 +877,7 @@ a:hover {
 
 .buttonwrap {
 	height: 150px;
+	margin-top: 110px;
 
 
 .button {
@@ -848,6 +900,10 @@ a:hover {
 			}// a
 		
 		} // .button
+			.button:hover {
+				background: url('assets/images/diagonaloverlay4x4px 2.png') repeat,
+				@red;
+}
 } // .buttonwrap
 
 //--------------------TEAM PAGE STYLES ---------------------------
@@ -855,25 +911,79 @@ a:hover {
 	width: 488px;
 }
 
-.team {
-	.navselected {
-		position:relative;
-		display:block;
-		left: 105px;
+// .inside {
+// 	border: 1px dashed white;
+// }
+
+// .top {
+// 	border-top: 1px dashed white;
+// }
+// .right {
+// 	border-right: 1px dashed white;
+// }
+
+// .bottom {
+// 	border-bottom: 1px dashed white;
+// }
+
+.dashedLineH {
+	background:@black;
+	height:1px;
+	clear:both;
+	width: 100%;
+
+	hr {
+		// color:white;
+		border-top: 1px dashed white;
+		margin: 0;
 	}
+}
+
+.shortLine {
+	width:50%;
+}
+
+.spacer {
+	margin-top: 1px;
+}
+
+.floatRight {
+	float:right;
+}
+.vertLine {
+	width:1px;
+	height: 245px;
+	background:black;
+	float:left;
+	background: url('assets/images/dashedline.png') repeat, @black;
+}
+
+.team {
+	// .navselected {
+	// 	position:relative;
+	// 	display:block;
+	// 	left: 105px;
+	// }
 		.headimg {
 		background: 
 			url('assets/images/diagonaloverlay4x4px 2.png') repeat,
 			url(assets/images/team1600.png) no-repeat, 
 			@black;
+		-webkit-background-size: cover, cover;
+		   -moz-background-size: cover, cover;
+			 -o-background-size: cover, cover;
+				background-size: cover, cover;	
 	}
 }
 
+
 #teamgrid {
-	width: 1020px;
+	width: 1024px;
 	margin: 0 auto;
 	margin-top: 60px;
 	padding-bottom: 60px;
+	display: table;
+
 
 	.show {
 		display:block;
@@ -888,16 +998,23 @@ a:hover {
 		}
 	} // .liner
 
-	.pure-u-1-2 {
+	.half {
 		height: 245px;
 		// border: 1px dashed white;
 		box-sizing:border-box;
+		float:left;
+		width: 50%;
+		width:510px;
 	}
 
-	.pure-u-1-4 {
+	.quarter{
 		height: 245px;
 		// border: 1px dashed white;
 		box-sizing:border-box;
+		width: 255px;
+		float:left;
+		display:table-cell;
+		border-collapse:collapse;
 	}
 
 	.categoryblock {
@@ -905,9 +1022,10 @@ a:hover {
 		color:white;
 		text-align:center;
 		line-height: 245px;
+		height: 245px;
+		width: 255px;
 		border-left: none;
-		border-top: 1px dashed white;
-		border-bottom:1px dashed white;
+		// border-bottom:1px dashed white;
 	}
 	.long {
 			line-height: 55px;
@@ -927,7 +1045,8 @@ a:hover {
 			background-color:black;
 			opacity: .7;
 			z-index: 3;
-			height: 245px;
+			height: 100%;
+			width:100%;
 			// top: -215px;
 			// position: relative;
 			display: block;
@@ -979,16 +1098,20 @@ a:hover {
 	}
 
 .news {
-	.navselected {
-		position:relative;
-		display:block;
-		left: 334px;
-	}
+	// .navselected {
+	// 	position:relative;
+	// 	display:block;
+	// 	left: 334px;
+	// }
 	.headimg {
 		background: 
 			url('assets/images/diagonaloverlay4x4px 2.png') repeat,
 			url(assets/images/news1600.png) no-repeat, 
 			@black;
+		-webkit-background-size: cover, cover;
+		   -moz-background-size: cover, cover;
+			 -o-background-size: cover, cover;
+				background-size: cover, cover;	
 	}
 
 }
@@ -1009,17 +1132,21 @@ a:hover {
 }
 
 .jobs {
-	.navselected {
-		position:relative;
-		display:block;
-		left: 421px;
-	}
+	// .navselected {
+	// 	position:relative;
+	// 	display:block;
+	// 	left: 421px;
+	// }
 
 	.headimg {
 		background: 
 			url('assets/images/diagonaloverlay4x4px 2.png') repeat,
 			url(assets/images/jobs1600.png) no-repeat, 
 			@black;
+		-webkit-background-size: cover, cover;
+		   -moz-background-size: cover, cover;
+			 -o-background-size: cover, cover;
+				background-size: cover, cover;	
 	}
 }
 
