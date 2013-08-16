@@ -1,17 +1,14 @@
-
 	// All Pages
-
-
 	// Show and Hide Rollover state of MadeinNY heart
 		$(document).ready(function() {
 			$('#madeinny').hover(function() {
-				// console.log('poop');
+				
 				$('#whiteheart').removeClass('show');
 				$('#whiteheart').addClass('hide');
 				$('#hoverstate').removeClass('hide');
 				$('#hoverstate').addClass('show');
 			}, function() {
-				// console.log('eeeee');
+				
 				$('#whiteheart').removeClass('hide');
 				$('#whiteheart').addClass('show');
 				$('#hoverstate').removeClass('show');
@@ -21,16 +18,29 @@
 
 
 		$(function() {
-			$('.pure-u-1-4').hover(function() {
+			$('.quarter').hover(function() {
 				$(this).show('.rollover');
 			});
 		});
 
+// Team Page
+// check positions of boxes that should have no right outline
+$.fn.checkPosition = function () {
+	return this.index() === $('#evan').index() || this.index() === $('#conrad').index() || this.index() === $('#lindsey').index();
+};
+// Check each team box, if its not on the end, add dashed line
+$(function() {
+	$('#teamgrid').find('.quarter').each(function() {
+			if ( $(this).checkPosition() === false) {
+					$(this).after('<div class="vertLine"><hr></div>');
+		}
+	});
+});
 
 
 // Team page toggle show .rollover state on hover for small blocks
 		$(function () {
-			$('#teamgrid .pure-u-1-4').hover(function () {
+			$('#teamgrid .quarter').hover(function () {
 				$('.rollover', this).addClass('teamshow');
 			}, function () {
 				$('.rollover', this).removeClass('teamshow');
@@ -39,7 +49,7 @@
 		
 // Team page toggle .rollover state on hover for Pedro
 		$(function () {
-			$('#teamgrid .pure-u-1-2').hover(function () {
+			$('#teamgrid .half').hover(function () {
 				$('.rollover', this).addClass('teamshow');
 			}, function () {
 				$('.rollover', this).removeClass('teamshow');
@@ -48,7 +58,7 @@
 
 // Portfolio Page - toggle rollover state on hover 
 		$(function () {
-			$('#companygrid > .pure-u-1-4').hover(function() {
+			$('#companygrid > .quarter').hover(function() {
 				$('.rollover', this).addClass('teamshow');
 			}, function () {
 				$('.rollover', this).removeClass('teamshow');
@@ -94,7 +104,7 @@
 
 //NAVIGATION BAR ANIMATIONS
 
-$(function () {
+ $(function () {
 	// First check what page is loaded 
 	var url = window.location.href;
 	var urlArray = url.split('/');
@@ -105,13 +115,13 @@ $('#nav').hover(function() {
 		console.log("hover!");
 		var $el = $(this);
 		var leftPos = $el.position().left - ($('.navselected').width() - $el.width())/2;
-		$('.navselected').stop().animate({
+			$('.navselected').stop().animate({
 			left: leftPos}, 400, function() {
 				$('.navselected').removeClass('hide');
 				$('.navselected').stop().fadeIn(400);	
-
 			} //animate callback
 			); // animate fn
+	
 	}); // nav a hover
 		}, function () {
 			// On the landing page, make red bar disappear when nav is not being hovered upon
