@@ -19,16 +19,18 @@ $(document).ready(function() {
 
 // Portfolio page 
 // Show rollover content when user hovers over a company
+$(document).ready(function() {
 	$('.company').each(function() {
-		$(this).hover(function() {
-			console.log('hover');
-			$(this).find('.rollover').css({'display':'block'});
+		$(this).hover(
+			function() {
+			//console.log('hover');
+			$(this).find('.rollover').show();
 		}, function() {
 			// Hide it on mouseout
-			(this).find('.rollover').css({'display': 'none'});
+			$(this).find('.rollover').hide();
 		});
 	});
-
+});
 
 // Team Page
 // check positions of boxes that should have no right outline
@@ -121,7 +123,7 @@ $('#nav').hover(function() {
 	$('#nav a').hover(function() {
 		console.log("hover!");
 		var $el = $(this);
-		var leftPos = $el.position().left - ($('.navselected').width() - $el.width())/2;
+		var leftPos = $el.position().left - (110 - $el.width())/2;
 			$('.navselected').stop().animate({
 			left: leftPos}, 400, function() {
 				$('.navselected').removeClass('hide');
