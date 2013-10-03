@@ -226,6 +226,9 @@ a:hover {
 
 		#nav {
 			margin-left: 10px;
+			select {
+				display:none;
+			}
 			ul {
 				//Margins to balance due to removing jobs link 
 				margin-left: 41px;
@@ -1228,10 +1231,48 @@ a:hover {
 	}
 }
 
-@media (min-width: 480px) and (max-width: 768px) {
-// 	html {
-// 		width: 768px;
-// 	}
+@media only screen and (max-width: 767px) {
+	html {
+		max-width: 768px;
+	}
+.nav {
+
+#nav {
+	ul {
+	display:none;
+	}
+	select {
+	display:inline-block !important;
+	width: 100px;
+	margin-top: 25px;
+	font-family: "DINNextLTPro-Medium";
+	text-transform: uppercase;
+	line-height: 25px;
+	-webkit-appearance:none;
+	font-size: 20px;
+	background-color:white;
+	border-radius: 0;
+	color:black;
+	background-image: url('/qventures/assets/icons/chevrondown.png');
+	background-repeat: no-repeat;
+	background-position-x: 75px;
+	background-position-y: 3px;
+	float:right;
+	}
+	.navselected {
+		display:none;
+	}
+} // #nav
+#social {
+		display:none;
+	}
+
+.navbarWrap #logo {
+	margin-left: 40px;
+	padding-right: 40px;
+}
+}
+
 	#teamgrid {
 		width: 100%;
 		max-width: 786px;
