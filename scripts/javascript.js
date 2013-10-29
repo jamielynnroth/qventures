@@ -19,16 +19,18 @@ $(document).ready(function() {
 
 // Portfolio page 
 // Show rollover content when user hovers over a company
+$(document).ready(function() {
 	$('.company').each(function() {
-		$(this).hover(function() {
-			console.log('hover');
-			$(this).find('.rollover').css({'display':'block'});
+		$(this).hover(
+			function() {
+			//console.log('hover');
+			$(this).find('.rollover').show();
 		}, function() {
 			// Hide it on mouseout
-			(this).find('.rollover').css({'display': 'none'});
+			$(this).find('.rollover').hide();
 		});
 	});
-
+});
 
 // Team Page
 // check positions of boxes that should have no right outline
