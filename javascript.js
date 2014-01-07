@@ -119,7 +119,7 @@ $(function() {
 //Rollover feedback on nav bar 
 $('#nav').hover(function() {
 	$('#nav a').hover(function() {
-		console.log("hover!");
+		//console.log("hover!");
 		var $el = $(this);
 		var leftPos = $el.position().left - ($('.navselected').width() - $el.width())/2;
 			$('.navselected').stop().animate({
